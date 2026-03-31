@@ -1,0 +1,33 @@
+{
+  "name": "oshikatsu-koukan-app",
+  "version": "1.0.0",
+  "description": "推し活×AI C2Cプラットフォーム モノレポ",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "dev:web": "npm run dev --workspace=apps/web",
+    "test": "node test-auto-recovery.js",
+    "demo": "node demo.js",
+    "auto-recover": "node auto-recovery.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "api",
+    "rate-limit",
+    "retry",
+    "fetch",
+    "http-client",
+    "auto-recovery",
+    "rate-limit-handler"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

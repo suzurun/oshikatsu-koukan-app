@@ -1,0 +1,31 @@
+{
+  "autoRecovery": {
+    "retryForever": true,
+    "baseDelay": 1000,
+    "maxDelay": 300000,
+    "maxTotalWaitTime": null,
+    "healthCheckInterval": 60000,
+    "requiredSuccesses": 2
+  },
+  "logging": {
+    "enabled": true,
+    "level": "info",
+    "saveToFile": true,
+    "logFileName": "recovery-log.json"
+  },
+  "notifications": {
+    "enabled": true,
+    "onRecovery": true,
+    "onError": true
+  },
+  "api": {
+    "timeout": 30000,
+    "retryOnNetworkError": true
+  }
+}
+
+
+
+
+
+

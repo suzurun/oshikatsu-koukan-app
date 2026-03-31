@@ -1,0 +1,53 @@
+# ログファイル
+*.log
+*.json
+!package.json
+!package-lock.json
+!auto-recovery.config.json
+!tsconfig.json
+
+# エクスポートファイル
+export-*.csv
+export-*.json
+export-*.txt
+*-stats.csv
+*-stats.json
+*-logs.txt
+
+# レポートファイル
+error-report.json
+error-report.html
+
+# 履歴ディレクトリ
+history/
+
+# 通知ログ
+notifications.log
+
+# Node modules
+node_modules/
+
+# Next.js
+.next/
+out/
+build/
+dist/
+
+# 環境変数
+.env
+.env.local
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 一時ファイル
+*.tmp
+*.temp
