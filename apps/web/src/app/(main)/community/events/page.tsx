@@ -93,7 +93,7 @@ export default function EventsPage() {
           <h1 className="text-xl font-black text-[#333333]">オフ会・イベント</h1>
           <p className="text-xs text-gray-400 mt-0.5">ファン同士でリアルに会おう！</p>
         </div>
-        <Link href="/community/events/new"
+        <Link href={"/community/events/new" as never}
           className="flex-shrink-0 bg-gradient-to-r from-violet-500 to-pink-500 text-white font-black text-xs px-4 py-2.5 rounded-full hover:opacity-90 transition-opacity shadow-md flex items-center gap-1.5">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} className="w-3.5 h-3.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
@@ -232,7 +232,7 @@ export default function EventsPage() {
             </div>
           ))}
         </div>
-        <Link href="/community/events/new"
+        <Link href={"/community/events/new" as never}
           className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-500 to-pink-500 text-white font-black text-xs px-6 py-2.5 rounded-full hover:opacity-90 transition-opacity shadow-md">
           イベントを作る →
         </Link>
