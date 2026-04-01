@@ -1,24 +1,6 @@
 import Link from 'next/link'
 import CommunityRoom from './CommunityRoom'
-
-/* ─── コミュニティマスタデータ ─── */
-export const COMMUNITY_DATA: Record<string, {
-  name: string; genre: string; img: string; banner: string;
-  members: number; posts: number; color: string; description: string;
-}> = {
-  'bts':         { name: 'BTS',          genre: 'K-POP',  img: 'https://picsum.photos/seed/bts_comm/160/160',    banner: 'https://picsum.photos/seed/bts_banner/1200/300',    members: 12480, posts: 3241, color: 'from-purple-500 to-indigo-600',  description: 'BTS（防弾少年団）のファンコミュニティ。グッズ交換・情報交換・オフ会など。' },
-  'newjeans':    { name: 'NewJeans',      genre: 'K-POP',  img: 'https://picsum.photos/seed/nj_comm/160/160',     banner: 'https://picsum.photos/seed/nj_banner/1200/300',     members: 8920,  posts: 2108, color: 'from-sky-400 to-blue-600',       description: 'NewJeansのバニーたちが集まるコミュニティ🐰' },
-  'blackpink':   { name: 'BLACKPINK',     genre: 'K-POP',  img: 'https://picsum.photos/seed/bp_comm/160/160',     banner: 'https://picsum.photos/seed/bp_banner/1200/300',     members: 15300, posts: 4520, color: 'from-pink-500 to-rose-600',      description: 'BLACKPINKのブリンクたちのコミュニティ💖' },
-  'lesserafim':  { name: 'LE SSERAFIM',   genre: 'K-POP',  img: 'https://picsum.photos/seed/lsf_comm/160/160',    banner: 'https://picsum.photos/seed/lsf_banner/1200/300',    members: 6740,  posts: 1893, color: 'from-amber-400 to-orange-500',   description: 'LE SSERAFIMのグッズ交換・情報交換コミュニティ' },
-  'twice':       { name: 'TWICE',         genre: 'K-POP',  img: 'https://picsum.photos/seed/twice_comm/160/160',  banner: 'https://picsum.photos/seed/twice_banner/1200/300',  members: 9210,  posts: 2654, color: 'from-rose-400 to-pink-600',      description: 'TWICEのONCEが集まるファンルーム💗' },
-  'aespa':       { name: 'aespa',         genre: 'K-POP',  img: 'https://picsum.photos/seed/aespa_comm/160/160',  banner: 'https://picsum.photos/seed/aespa_banner/1200/300',  members: 7630,  posts: 2011, color: 'from-cyan-400 to-teal-600',      description: 'aespaのMYs（マイズ）コミュニティ✨' },
-  'stray-kids':  { name: 'Stray Kids',    genre: 'K-POP',  img: 'https://picsum.photos/seed/skz_comm/160/160',    banner: 'https://picsum.photos/seed/skz_banner/1200/300',    members: 5480,  posts: 1542, color: 'from-yellow-400 to-orange-500',  description: 'Stray KidsのSTAYコミュニティ' },
-  'nogizaka46':  { name: '乃木坂46',      genre: 'J-POP',  img: 'https://picsum.photos/seed/nogi_comm/160/160',   banner: 'https://picsum.photos/seed/nogi_banner/1200/300',   members: 11200, posts: 3890, color: 'from-green-400 to-teal-600',     description: '乃木坂46のファンコミュニティ。生写真・グッズ交換など。' },
-  'akb48':       { name: 'AKB48',         genre: 'J-POP',  img: 'https://picsum.photos/seed/akb_comm/160/160',    banner: 'https://picsum.photos/seed/akb_banner/1200/300',    members: 13400, posts: 5100, color: 'from-red-400 to-rose-600',       description: 'AKB48グループのファンコミュニティ' },
-  'niziu':       { name: 'NiziU',         genre: 'J-POP',  img: 'https://picsum.photos/seed/niziu_comm/160/160',  banner: 'https://picsum.photos/seed/niziu_banner/1200/300',  members: 4320,  posts: 1201, color: 'from-violet-400 to-fuchsia-600', description: 'NiziUのファンルーム🌈' },
-  'seventeen':   { name: 'SEVENTEEN',     genre: 'K-POP',  img: 'https://picsum.photos/seed/svt_comm/160/160',    banner: 'https://picsum.photos/seed/svt_banner/1200/300',    members: 7890,  posts: 2340, color: 'from-blue-400 to-indigo-600',    description: 'SEVENTEENのCARAT（캐럿）コミュニティ💎' },
-  'enhypen':     { name: 'ENHYPEN',       genre: 'K-POP',  img: 'https://picsum.photos/seed/en_comm/160/160',     banner: 'https://picsum.photos/seed/en_banner/1200/300',     members: 3210,  posts: 987,  color: 'from-slate-500 to-gray-700',     description: 'ENHYPENのENGENEコミュニティ' },
-}
+import { COMMUNITY_DATA } from '../communityData'
 
 interface Props { params: Promise<{ slug: string }> }
 
